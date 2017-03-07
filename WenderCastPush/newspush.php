@@ -1,7 +1,8 @@
 <?php
 
 // Put your device token here (without spaces):
-$deviceToken = '94756674a6181b2a4fe50582e39bab85770f76f6633da83d774d376a4d586462';
+//$deviceToken = '94756674a6181b2a4fe50582e39bab85770f76f6633da83d774d376a4d586462';
+$deviceToken = 'c293d989bcad4c20ce578df86d2e0e44a4e2ba03916294d2e612c85f30819256';
 
 // Put your private key's passphrase here:
 $passphrase = '123456';
@@ -15,7 +16,7 @@ if (!$message || !$url)
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+//curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
 
 $ctx = stream_context_create();
 stream_context_set_option($ctx, 'ssl', 'local_cert', 'ck.pem');
