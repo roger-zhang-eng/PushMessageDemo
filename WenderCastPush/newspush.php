@@ -15,9 +15,13 @@ if (!$message || !$url)
 
 ////////////////////////////////////////////////////////////////////////////////
 
+#curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+
 $ctx = stream_context_create();
 stream_context_set_option($ctx, 'ssl', 'local_cert', 'ck.pem');
 stream_context_set_option($ctx, 'ssl', 'passphrase', $passphrase);
+
+stream_context_set_option($ctx, 'ssl', 'cafile', 'entrust_2048_ca.cer');
 
 // Open a connection to the APNS server
 $fp = stream_socket_client(
