@@ -37,6 +37,7 @@ echo 'Connected to APNS' . PHP_EOL;
 // Create the payload body
 $body['aps'] = array(
   'alert' => $message,
+  'badge' => 0,
   'sound' => 'default',
   'link_url' => $url,
   'category' => "NEWS_CATEGORY",
